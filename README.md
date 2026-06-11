@@ -29,11 +29,6 @@ The script handles this by excluding files from the delay flag if:
 The last received date was a Friday, and
 the current day is Sunday or Monday
 
-**AND NOT** (
-    DATEPART(WEEKDAY, mf.Last_File_Received) = 6   
-  AND DATEPART(WEEKDAY, GETDATE()) IN (1, 2) 
-)
-
 **Output**
 The final result set returns one row per delayed file, including:
 
